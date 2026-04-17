@@ -22,7 +22,7 @@ SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 OUTPUT       = PROJECT_ROOT / "cadsmith" / "step" / "recovery_bay.step"
 
-# Build using functional API: parts combined with boolean union
+# Build using functional API
 tube     = extrude(Circle(OD_MM / 2) - Circle(ID_MM / 2), amount=LENGTH_MM)
 shoulder = extrude(Circle(SHOULDER_OD_MM / 2) - Circle(SHOULDER_ID_MM / 2), amount=SHOULDER_LEN_MM)
 

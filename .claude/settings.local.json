@@ -21,7 +21,23 @@
       "Bash(uv --directory /c/Users/rumiq/Desktop/RocketSmith run -m rocketsmith.mcp --help)",
       "Bash(uv --directory /c/Users/rumiq/Desktop/RocketSmith run python build_rocket.py)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if k != 'components'}, indent=2\\)\\)\")",
-      "Bash(python /c/Users/rumiq/Desktop/RocketSmith/.venv/Scripts/python.exe -c \" import json with open\\('/c/Users/rumiq/Desktop/rocket-build-rumi/gui/component_tree.json'\\) as f: d = json.load\\(f\\) print\\('Top-level keys:', list\\(d.keys\\(\\)\\)\\) print\\('parts:', d.get\\('parts', []\\)\\) print\\('components count:', len\\(d.get\\('components', []\\)\\)\\) \")"
+      "Bash(python /c/Users/rumiq/Desktop/RocketSmith/.venv/Scripts/python.exe -c \" import json with open\\('/c/Users/rumiq/Desktop/rocket-build-rumi/gui/component_tree.json'\\) as f: d = json.load\\(f\\) print\\('Top-level keys:', list\\(d.keys\\(\\)\\)\\) print\\('parts:', d.get\\('parts', []\\)\\) print\\('components count:', len\\(d.get\\('components', []\\)\\)\\) \")",
+      "Bash(python -c ' *)",
+      "Bash(rm -f gui/.gui.pid)",
+      "Bash(pkill -f \"gui_server\\\\|http.server.*8765\")",
+      "Bash(python -m http.server 8765 --directory gui)",
+      "Bash(start http://localhost:8765)",
+      "Bash(curl *)",
+      "Bash(cmd /c start \"\" \"index.html\")",
+      "Bash(cmd /c \"for /f \\\\\"tokens=5\\\\\" %a in \\('netstat -aon ^| findstr :24880'\\) do taskkill /PID %a /F\")",
+      "Bash(\"C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe\" --help)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/rocket_config.ini --export-gcode --output prusaslicer/gcode/nose_cone.gcode cadsmith/step/nose_cone.step)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/rocket_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/nose_cone.gcode cadsmith/step/nose_cone.step)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/rocket_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/nose_cone.gcode gui/assets/stl/nose_cone.stl)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --printer-profile 'Creality Ender-3 \\(0.4 mm nozzle\\)' --print-profile '0.20mm QUALITY @ENDER3' --export-config prusaslicer/ender3_dump.ini)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --printer-profile 'Creality Ender-3 \\(0.4 mm nozzle\\)' --print-profile '0.20mm QUALITY @ENDER3' --material-profile 'Generic PLA @ENDER3' --center 117.5,117.5 --export-gcode --output C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/gcode/nose_cone.gcode C:/Users/rumiq/Desktop/rocket-build-rumi/gui/assets/stl/nose_cone.stl)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/flat_config.ini --center 150,150 --export-gcode --output C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/gcode/nose_cone.gcode C:/Users/rumiq/Desktop/rocket-build-rumi/gui/assets/stl/nose_cone.stl)",
+      "Bash(python *)"
     ]
   }
 }

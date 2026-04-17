@@ -35,6 +35,16 @@ FIN_FILLET_MM    = 3.0     # clamped: min(12.7/2*0.9, 3.0) = 3.0mm
 FIN_ROOT_INSET   = 1.0     # fin root penetrates wall by 1mm for fuse
 FIN_Z_START      = 280.0   # fin root leading edge (relative to fin can fore)
 
+# Ejection gas baffle near fore end — spider/pie design
+# 3 radial legs hold a central boss; gaps allow gas flow to pressurize recovery bay
+BAFFLE_Z_START      = 15.0   # baffle fore face (from fin can fore end)
+BAFFLE_THICK        = 25.0   # baffle thickness in Z
+BAFFLE_BOSS_R       = 12.5   # central boss radius (25mm OD)
+BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 25.0mm
+BAFFLE_LEG_W        = 8.0    # leg width (tangential direction)
+BAFFLE_LEG_INNER_R  = BAFFLE_BOSS_R - 2.0  # legs overlap 2mm into boss for clean fusion
+BAFFLE_HOLE_D       = 6.5    # 5/16"-18 tapping pilot hole diameter
+
 # --- Resolve output path ---
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -88,10 +98,40 @@ with BuildPart() as all_fins_part:
 
 all_fins = all_fins_part.part
 
-# ── Step 3: Fuse fins into body ────────────────────────────────────────────────
+# ── Step 3: Fuse fins into body + baffle ──────────────────────────────────────
 with BuildPart() as airframe:
     add(body)
     add(all_fins)
+
+    # ── Baffle: central boss ──────────────────────────────────────────────────
+    with BuildSketch(Plane.XY.offset(BAFFLE_Z_START)):
+        Circle(BAFFLE_BOSS_R)
+    extrude(amount=BAFFLE_THICK)
+
+    # ── Baffle: 3 radial legs ─────────────────────────────────────────────────
+    for theta_deg in [0, 120, 240]:
+        theta  = math.radians(theta_deg)
+        cos_t  = math.cos(theta)
+        sin_t  = math.sin(theta)
+        half_w = BAFFLE_LEG_W / 2
+        p1 = (BAFFLE_LEG_INNER_R * cos_t - half_w * sin_t,
+              BAFFLE_LEG_INNER_R * sin_t + half_w * cos_t)
+        p2 = (BAFFLE_LEG_INNER_R * cos_t + half_w * sin_t,
+              BAFFLE_LEG_INNER_R * sin_t - half_w * cos_t)
+        p3 = (BAFFLE_INNER_R * cos_t + half_w * sin_t,
+              BAFFLE_INNER_R * sin_t - half_w * cos_t)
+        p4 = (BAFFLE_INNER_R * cos_t - half_w * sin_t,
+              BAFFLE_INNER_R * sin_t + half_w * cos_t)
+        with BuildSketch(Plane.XY.offset(BAFFLE_Z_START)):
+            with BuildLine():
+                Polyline(p1, p2, p3, p4, close=True)
+            make_face()
+        extrude(amount=BAFFLE_THICK)
+
+    # ── Baffle: eyebolt pilot hole through boss ───────────────────────────────
+    with BuildSketch(Plane.XY.offset(BAFFLE_Z_START)):
+        Circle(BAFFLE_HOLE_D / 2)
+    extrude(amount=BAFFLE_THICK, mode=Mode.SUBTRACT)
 
 # ── Step 4: Fin root fillets ───────────────────────────────────────────────────
 if FIN_FILLET_MM > 0:

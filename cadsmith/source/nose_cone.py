@@ -17,6 +17,10 @@ BASE_OD_MM      = 54.0    # ogive base diameter = airframe OD
 SHOULDER_OD_MM  = 50.0    # shoulder OD = airframe ID (zero clearance in manifest)
 SHOULDER_LEN_MM = 30.0    # shoulder length
 
+# Eyebolt hole at shoulder aft face (Z=0, opens downward for assembly access)
+EYEBOLT_HOLE_D     = 6.5   # 5/16"-18 tapping pilot hole diameter
+EYEBOLT_HOLE_DEPTH = 15.0  # blind hole depth into shoulder (shoulder is 30mm thick)
+
 # --- Resolve output path ---
 SCRIPT_DIR   = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -53,6 +57,11 @@ with BuildPart() as nose_cone:
             Polyline(*profile, close=True)
         make_face()
     revolve(axis=Axis.Z, mode=Mode.ADD)
+
+    # 3. Eyebolt blind hole from aft face (Z=0), 15mm into shoulder
+    with BuildSketch(Plane.XY):
+        Circle(EYEBOLT_HOLE_D / 2)
+    extrude(amount=EYEBOLT_HOLE_DEPTH, mode=Mode.SUBTRACT)
 
 # --- Export ---
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
