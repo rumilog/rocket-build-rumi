@@ -1,0 +1,52 @@
+{
+  "name": "fin_can",
+  "display_name": "Fin Can",
+  "stl_path": "gui/assets/stl/fin_can.stl",
+  "step_path": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi\\cadsmith\\step\\fin_can.step",
+  "brep_path": null,
+  "bounding_box": {
+    "x": [
+      108.85,
+      "millimeter"
+    ],
+    "y": [
+      125.69,
+      "millimeter"
+    ],
+    "z": [
+      400.0,
+      "millimeter"
+    ]
+  },
+  "color": "#cccccc",
+  "cost": null,
+  "description": null,
+  "id": null,
+  "volume": [
+    398107.48,
+    "millimeter ** 3"
+  ],
+  "surface_area": [
+    150177.84,
+    "millimeter ** 2"
+  ],
+  "center_of_mass": {
+    "x": [
+      -0.0,
+      "millimeter"
+    ],
+    "y": [
+      0.0,
+      "millimeter"
+    ],
+    "z": [
+      287.339,
+      "millimeter"
+    ]
+  },
+  "mass": null,
+  "count": 1,
+  "source": null,
+  "generator_class": null,
+  "generator_params": null
+}

@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "source_ork": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi\\openrocket\\H219T_sport.ork",
+  "project_root": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi",
+  "generated_at": "2026-04-16T19:33:03.556559+00:00",
+  "rocket_name": "H219T Sport",
+  "stages": [
+    {
+      "name": "Sustainer",
+      "components": [
+        {
+          "type": "NoseCone",
+          "name": "Nose Cone",
+          "category": "structural",
+          "dimensions": {
+            "kind": "nose_cone",
+            "shape": "ogive",
+            "length": [
+              220.0,
+              "millimeter"
+            ],
+            "base_od": [
+              54.0,
+              "millimeter"
+            ],
+            "wall": [
+              2.0,
+              "millimeter"
+            ]
+          },
+          "mass": [
+            0.03225,
+            "kilogram"
+          ],
+          "override_mass": [
+            0.03225,
+            "kilogram"
+          ],
+          "override_mass_enabled": false,
+          "material": "Cardboard",
+          "material_density": [
+            680.0,
+            "kilogram / meter ** 3"
+          ],
+          "human_notes": null,
+          "agent": {
+            "fate": "print",
+            "fused_into": null,
+            "reason": "Nose cone is always a standalone printed part for AM",
+            "updated_by": "manufacturing",
+            "updated_at": "2026-04-16T19:33:03.559558+00:00",
+            "dfam_shoulder_length_mm": 30.0,
+            "dfam_shoulder_od_mm": 50.0,
+            "dfam_hollow": false,
+            "dfam_wall_mm": null
+          },
+          "cost": null,
+          "step_path": "cadsmith/step/nose_cone.step",
+          "children": []
+        },
+        {
+          "type": "BodyTube",
+          "name": "Recovery Bay",
+          "category": "structural",
+          "dimensions": {
+            "kind": "tube",
+            "length": [
+              300.0,
+              "millimeter"
+            ],
+            "od": [
+              54.0,
+              "millimeter"
+            ],
+            "id": [
+              50.0,
+              "millimeter"
+            ],
+            "motor_mount": false
+          },
+          "mass": [
+            0.066652,
+            "kilogram"
+          ],
+          "override_mass": [
+            0.066652,
+            "kilogram"
+          ],
+          "override_mass_enabled": false,
+          "material": "Cardboard",
+          "material_density": [
+            680.0,
+            "kilogram / meter ** 3"
+          ],
+          "human_notes": null,
+          "agent": {
+            "fate": "print",
+            "fused_into": null,
+            "reason": "Body tube is always a standalone printed part for AM",
+            "updated_by": "manufacturing",
+            "updated_at": "2026-04-16T19:33:03.560559+00:00"
+          },
+          "cost": null,
+          "step_path": "cadsmith/step/recovery_bay.step",
+          "children": [
+            {
+              "type": "Parachute",
+              "name": "Main Chute",
+              "category": "recovery",
+              "dimensions": {
+                "kind": "recovery",
+                "diameter": [
+                  457.0,
+                  "millimeter"
+                ],
+                "length": null,
+                "packed_length": null,
+                "packed_diameter": null
+              },
+              "mass": [
+                0.01423,
+                "kilogram"
+              ],
+              "override_mass": [
+                0.01423,
+                "kilogram"
+              ],
+              "override_mass_enabled": false,
+              "material": "Ripstop nylon",
+              "material_density": [
+                0.067,
+                "kilogram / meter ** 3"
+              ],
+              "human_notes": null,
+              "agent": {
+                "fate": "purchase",
+                "fused_into": null,
+                "reason": "Parachute \u2014 purchased/non-structural item",
+                "updated_by": "manufacturing",
+                "updated_at": "2026-04-16T19:33:03.560559+00:00"
+              },
+              "cost": null,
+              "step_path": null,
+              "children": []
+            },
+            {
+              "type": "TubeCoupler",
+              "name": "Coupler",
+              "category": "structural",
+              "dimensions": {
+                "kind": "tube",
+                "length": [
+                  30.0,
+                  "millimeter"
+                ],
+                "od": [
+                  50.0,
+                  "millimeter"
+                ],
+                "id": [
+                  46.0,
+                  "millimeter"
+                ],
+                "motor_mount": false
+              },
+              "mass": [
+                0.006152,
+                "kilogram"
+              ],
+              "override_mass": [
+                0.006152,
+                "kilogram"
+              ],
+              "override_mass_enabled": false,
+              "material": "Cardboard",
+              "material_density": [
+                680.0,
+                "kilogram / meter ** 3"
+              ],
+              "human_notes": null,
+              "agent": {
+                "fate": "fuse",
+                "fused_into": "recovery_bay",
+                "reason": "Coupler fused as integral aft shoulder (default AM policy)",
+                "updated_by": "manufacturing",
+                "updated_at": "2026-04-16T19:33:03.560559+00:00",
+                "dfam_shoulder_od_mm": 50.0,
+                "dfam_shoulder_length_mm": 30.0
+              },
+              "cost": null,
+              "step_path": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "BodyTube",
+          "name": "Fin Can",
+          "category": "structural",
+          "dimensions": {
+            "kind": "tube",
+            "length": [
+              400.0,
+              "millimeter"
+            ],
+            "od": [
+              54.0,
+              "millimeter"
+            ],
+            "id": [
+              50.0,
+              "millimeter"
+            ],
+            "motor_mount": false
+          },
+          "mass": [
+            0.088869,
+            "kilogram"
+          ],
+          "override_mass": [
+            0.088869,
+            "kilogram"
+          ],
+          "override_mass_enabled": false,
+          "material": "Cardboard",
+          "material_density": [
+            680.0,
+            "kilogram / meter ** 3"
+          ],
+          "human_notes": null,
+          "agent": {
+            "fate": "print",
+            "fused_into": null,
+            "reason": "Body tube is always a standalone printed part for AM",
+            "updated_by": "manufacturing",
+            "updated_at": "2026-04-16T19:33:03.560559+00:00"
+          },
+          "cost": null,
+          "step_path": "cadsmith/step/fin_can.step",
+          "children": [
+            {
+              "type": "InnerTube",
+              "name": "Motor Mount",
+              "category": "structural",
+              "dimensions": {
+                "kind": "tube",
+                "length": [
+                  165.0,
+                  "millimeter"
+                ],
+                "od": [
+                  38.0,
+                  "millimeter"
+                ],
+                "id": [
+                  36.0,
+                  "millimeter"
+                ],
+                "motor_mount": true
+              },
+              "mass": [
+                0.013042,
+                "kilogram"
+              ],
+              "override_mass": [
+                0.013042,
+                "kilogram"
+              ],
+              "override_mass_enabled": false,
+              "material": "Cardboard",
+              "material_density": [
+                680.0,
+                "kilogram / meter ** 3"
+              ],
+              "human_notes": null,
+              "agent": {
+                "fate": "fuse",
+                "fused_into": "fin_can",
+                "reason": "Motor mount fused as local wall thickening (default AM policy)",
+                "updated_by": "manufacturing",
+                "updated_at": "2026-04-16T19:33:03.560559+00:00",
+                "dfam_bore_mm": 36.0,
+                "dfam_region_start_mm": 0.0,
+                "dfam_region_end_mm": 0.0
+              },
+              "cost": null,
+              "step_path": null,
+              "children": []
+            },
+            {
+              "type": "TrapezoidFinSet",
+              "name": "Fins",
+              "category": "structural",
+              "dimensions": {
+                "kind": "fin_set",
+                "fin_type": "trapezoid",
+                "count": 3,
+                "root_chord": [
+                  120.0,
+                  "millimeter"
+                ],
+                "tip_chord": [
+                  50.0,
+                  "millimeter"
+                ],
+                "span": [
+                  41.9,
+                  "millimeter"
+                ],
+                "sweep": [
+                  40.0,
+                  "millimeter"
+                ],
+                "thickness": [
+                  4.0,
+                  "millimeter"
+                ]
+              },
+              "mass": [
+                0.029062,
+                "kilogram"
+              ],
+              "override_mass": [
+                0.029062,
+                "kilogram"
+              ],
+              "override_mass_enabled": false,
+              "material": "Cardboard",
+              "material_density": [
+                680.0,
+                "kilogram / meter ** 3"
+              ],
+              "human_notes": null,
+              "agent": {
+                "fate": "fuse",
+                "fused_into": "fin_can",
+                "reason": "Fins always integrated into parent body tube for AM",
+                "updated_by": "manufacturing",
+                "updated_at": "2026-04-16T19:33:03.560559+00:00",
+                "dfam_thickness_mm": 12.7,
+                "dfam_or_thickness_mm": 4.0,
+                "dfam_fillet_mm": 3.0
+              },
+              "cost": null,
+              "step_path": null,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "cg": [
+        541.5,
+        "millimeter"
+      ],
+      "cp": [
+        621.9,
+        "millimeter"
+      ],
+      "stability_cal": 1.49,
+      "max_diameter": [
+        54.0,
+        "millimeter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "nose_cone",
+  "display_name": "Nose Cone",
+  "stl_path": "gui/assets/stl/nose_cone.stl",
+  "step_path": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi\\cadsmith\\step\\nose_cone.step",
+  "brep_path": null,
+  "bounding_box": {
+    "x": [
+      54.0,
+      "millimeter"
+    ],
+    "y": [
+      54.0,
+      "millimeter"
+    ],
+    "z": [
+      250.0,
+      "millimeter"
+    ]
+  },
+  "color": "#cccccc",
+  "cost": null,
+  "description": null,
+  "id": null,
+  "volume": [
+    328707.26,
+    "millimeter ** 3"
+  ],
+  "surface_area": [
+    32104.14,
+    "millimeter ** 2"
+  ],
+  "center_of_mass": {
+    "x": [
+      -0.0,
+      "millimeter"
+    ],
+    "y": [
+      -0.0,
+      "millimeter"
+    ],
+    "z": [
+      83.921,
+      "millimeter"
+    ]
+  },
+  "mass": null,
+  "count": 1,
+  "source": null,
+  "generator_class": null,
+  "generator_params": null
+}

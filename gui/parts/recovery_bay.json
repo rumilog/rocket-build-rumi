@@ -1,0 +1,52 @@
+{
+  "name": "recovery_bay",
+  "display_name": "Recovery Bay",
+  "stl_path": "gui/assets/stl/recovery_bay.stl",
+  "step_path": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi\\cadsmith\\step\\recovery_bay.step",
+  "brep_path": null,
+  "bounding_box": {
+    "x": [
+      54.0,
+      "millimeter"
+    ],
+    "y": [
+      54.0,
+      "millimeter"
+    ],
+    "z": [
+      330.0,
+      "millimeter"
+    ]
+  },
+  "color": "#cccccc",
+  "cost": null,
+  "description": null,
+  "id": null,
+  "volume": [
+    107065.48,
+    "millimeter ** 3"
+  ],
+  "surface_area": [
+    108322.11,
+    "millimeter ** 2"
+  ],
+  "center_of_mass": {
+    "x": [
+      0.0,
+      "millimeter"
+    ],
+    "y": [
+      -0.0,
+      "millimeter"
+    ],
+    "z": [
+      163.944,
+      "millimeter"
+    ]
+  },
+  "mass": null,
+  "count": 1,
+  "source": null,
+  "generator_class": null,
+  "generator_params": null
+}

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_rocketsmith_rocketsmith__rocketsmith_setup",
+      "mcp__plugin_rocketsmith_rocketsmith__openrocket_database",
+      "Read(//c/Users/rumiq/Desktop/RocketSmith/**)",
+      "Bash(uv run *)",
+      "Bash(sleep 3 kill %1 echo \"exit: $?\")",
+      "Bash(echo \"exit_code: $?\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(claude --version)",
+      "Bash(npm show *)",
+      "Bash(claude mcp *)",
+      "Bash(uv pip *)",
+      "Bash(pip index *)",
+      "Bash(claude plugin *)",
+      "Bash(java *)",
+      "WebSearch",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if 'mcp' in k.lower\\(\\) or 'plugin' in k.lower\\(\\)}, indent=2\\)\\)\")",
+      "Bash(xargs grep *)",
+      "Bash(uv --directory /c/Users/rumiq/Desktop/RocketSmith run -m rocketsmith.mcp --help)",
+      "Bash(uv --directory /c/Users/rumiq/Desktop/RocketSmith run python build_rocket.py)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if k != 'components'}, indent=2\\)\\)\")",
+      "Bash(python /c/Users/rumiq/Desktop/RocketSmith/.venv/Scripts/python.exe -c \" import json with open\\('/c/Users/rumiq/Desktop/rocket-build-rumi/gui/component_tree.json'\\) as f: d = json.load\\(f\\) print\\('Top-level keys:', list\\(d.keys\\(\\)\\)\\) print\\('parts:', d.get\\('parts', []\\)\\) print\\('components count:', len\\(d.get\\('components', []\\)\\)\\) \")"
+    ]
+  }
+}

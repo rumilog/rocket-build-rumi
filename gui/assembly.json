@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "project_root": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi",
+  "generated_at": "2026-04-17T01:09:46.601131+00:00",
+  "parts": [
+    {
+      "part_file": "gui/parts/nose_cone.json",
+      "position": {
+        "x": [
+          0.0,
+          "millimeter"
+        ],
+        "y": [
+          0.0,
+          "millimeter"
+        ],
+        "z": [
+          250.0,
+          "millimeter"
+        ]
+      },
+      "rotation": {
+        "x": [
+          0.0,
+          "degree"
+        ],
+        "y": [
+          0.0,
+          "degree"
+        ],
+        "z": [
+          0.0,
+          "degree"
+        ]
+      },
+      "color": "#fb8500",
+      "invert_z": true,
+      "joint_offset": [
+        30.0,
+        "millimeter"
+      ]
+    },
+    {
+      "part_file": "gui/parts/recovery_bay.json",
+      "position": {
+        "x": [
+          0.0,
+          "millimeter"
+        ],
+        "y": [
+          0.0,
+          "millimeter"
+        ],
+        "z": [
+          220.0,
+          "millimeter"
+        ]
+      },
+      "rotation": {
+        "x": [
+          0.0,
+          "degree"
+        ],
+        "y": [
+          0.0,
+          "degree"
+        ],
+        "z": [
+          0.0,
+          "degree"
+        ]
+      },
+      "color": "#e57700",
+      "invert_z": false,
+      "joint_offset": [
+        30.0,
+        "millimeter"
+      ]
+    },
+    {
+      "part_file": "gui/parts/fin_can.json",
+      "position": {
+        "x": [
+          0.0,
+          "millimeter"
+        ],
+        "y": [
+          0.0,
+          "millimeter"
+        ],
+        "z": [
+          520.0,
+          "millimeter"
+        ]
+      },
+      "rotation": {
+        "x": [
+          0.0,
+          "degree"
+        ],
+        "y": [
+          0.0,
+          "degree"
+        ],
+        "z": [
+          0.0,
+          "degree"
+        ]
+      },
+      "color": "#cc6a00",
+      "invert_z": false,
+      "joint_offset": null
+    }
+  ],
+  "total_length": [
+    920.0,
+    "millimeter"
+  ]
+}

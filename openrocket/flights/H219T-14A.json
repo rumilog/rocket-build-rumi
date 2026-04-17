@@ -1,0 +1,10 @@
+{
+  "name": "H219T-14A",
+  "max_altitude_m": 240.35570839631708,
+  "max_altitude_ft": 788.6070792483164,
+  "max_velocity_ms": 313.5101140457447,
+  "max_velocity_mach": 0.9220885707227785,
+  "max_acceleration_ms2": 30618.206796433136,
+  "min_stability_cal": null,
+  "max_stability_cal": null
+}
