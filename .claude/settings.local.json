@@ -37,7 +37,9 @@
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --printer-profile 'Creality Ender-3 \\(0.4 mm nozzle\\)' --print-profile '0.20mm QUALITY @ENDER3' --export-config prusaslicer/ender3_dump.ini)",
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --printer-profile 'Creality Ender-3 \\(0.4 mm nozzle\\)' --print-profile '0.20mm QUALITY @ENDER3' --material-profile 'Generic PLA @ENDER3' --center 117.5,117.5 --export-gcode --output C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/gcode/nose_cone.gcode C:/Users/rumiq/Desktop/rocket-build-rumi/gui/assets/stl/nose_cone.stl)",
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/flat_config.ini --center 150,150 --export-gcode --output C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/gcode/nose_cone.gcode C:/Users/rumiq/Desktop/rocket-build-rumi/gui/assets/stl/nose_cone.stl)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode gui/assets/stl/fin_can.stl)",
+      "Bash(pip show *)"
     ]
   }
 }

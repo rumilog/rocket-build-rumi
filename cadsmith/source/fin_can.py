@@ -28,7 +28,7 @@ MOTOR_END_MM     = 400.0   # motor bore ends at aft face
 FIN_COUNT        = 3
 ROOT_CHORD_MM    = 120.0
 TIP_CHORD_MM     = 50.0
-SPAN_MM          = 41.9
+SPAN_MM          = 36.0
 SWEEP_MM         = 40.0
 FIN_THICK_MM     = 12.7    # DFAM-adjusted thickness for FDM structural strength
 FIN_FILLET_MM    = 3.0     # clamped: min(12.7/2*0.9, 3.0) = 3.0mm
