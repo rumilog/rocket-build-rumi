@@ -15,35 +15,42 @@ from pathlib import Path
 
 # --- Parameters (from manifest) ---
 LENGTH_MM        = 400.0   # fin can body tube length
-OD_MM            = 54.0    # outer diameter
-ID_MM            = 50.0    # inner diameter (general bore)
-WALL_MM          = 2.0     # wall thickness
+OD_MM            = 101.6   # outer diameter (4.0")
+ID_MM            = 88.9    # inner diameter (3.5")
+WALL_MM          = 6.35    # wall thickness (0.25")
 
-# Motor mount region (local wall thickening — aft 165mm of fin can)
-MOTOR_BORE_MM    = 38.5    # motor bore: 38mm motor + 0.5mm clearance
-MOTOR_START_MM   = 235.0   # motor bore starts 235mm from fore face
+# Motor mount region: 11" bore from aft
+MOTOR_BORE_MM    = 41.7    # motor bore: 1.642" per spec
+MOTOR_START_MM   = 120.6   # motor bore starts 120.6mm from fore (= 400 - 279.4mm)
 MOTOR_END_MM     = 400.0   # motor bore ends at aft face
 
-# Fin geometry (dfam values from manifest)
+# Fin geometry
 FIN_COUNT        = 3
-ROOT_CHORD_MM    = 120.0
-TIP_CHORD_MM     = 50.0
-SPAN_MM          = 36.0
-SWEEP_MM         = 40.0
+ROOT_CHORD_MM    = 200.0
+TIP_CHORD_MM     = 80.0
+SPAN_MM          = 130.0
+SWEEP_MM         = 60.0
 FIN_THICK_MM     = 12.7    # DFAM-adjusted thickness for FDM structural strength
-FIN_FILLET_MM    = 3.0     # clamped: min(12.7/2*0.9, 3.0) = 3.0mm
+FIN_FILLET_MM    = 3.0
 FIN_ROOT_INSET   = 1.0     # fin root penetrates wall by 1mm for fuse
-FIN_Z_START      = 280.0   # fin root leading edge (relative to fin can fore)
+FIN_Z_START      = 200.0   # fin root leading edge (relative to fin can fore)
 
-# Ejection gas baffle near fore end — spider/pie design
-# 3 radial legs hold a central boss; gaps allow gas flow to pressurize recovery bay
-BAFFLE_Z_START      = 15.0   # baffle fore face (from fin can fore end)
-BAFFLE_THICK        = 25.0   # baffle thickness in Z
-BAFFLE_BOSS_R       = 12.5   # central boss radius (25mm OD)
-BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 25.0mm
-BAFFLE_LEG_W        = 8.0    # leg width (tangential direction)
+# Shear pin clearance holes — fore end (outer part at recovery bay joint)
+# Recovery bay coupler (inner) slides in at Z=0. Holes at Z=15 align with
+# the heat inserts in the recovery bay coupler at its own Z=315 (AFT_SHEAR_Z).
+SHEAR_PIN_ANGLES_DEG = [0, 90, 180, 270]
+SHEAR_PIN_Z_MM       = 15.0   # from fore face
+CLEARANCE_D_MM       = 2.6    # clearance for 2-56 pin shaft
+CLEARANCE_DEPTH_MM   = 8.0    # through 6.35mm wall + margin
+
+# Ejection gas baffle — sits immediately above motor bore start (11" from aft)
+BAFFLE_Z_START      = 90.0   # baffle fore face (from fin can fore end)
+BAFFLE_THICK        = 30.0   # baffle thickness in Z (ends at 120mm, motor bore at 120.6mm)
+BAFFLE_BOSS_R       = 22.0   # central boss radius (scaled for 4" bore)
+BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 44.45mm
+BAFFLE_LEG_W        = 14.0   # leg width (tangential direction)
 BAFFLE_LEG_INNER_R  = BAFFLE_BOSS_R - 2.0  # legs overlap 2mm into boss for clean fusion
-BAFFLE_HOLE_D       = 6.5    # 5/16"-18 tapping pilot hole diameter
+BAFFLE_HOLE_D       = 7.75   # per design spec
 
 # --- Resolve output path ---
 SCRIPT_DIR   = Path(__file__).resolve().parent
@@ -133,7 +140,21 @@ with BuildPart() as airframe:
         Circle(BAFFLE_HOLE_D / 2)
     extrude(amount=BAFFLE_THICK, mode=Mode.SUBTRACT)
 
-# ── Step 4: Fin root fillets ───────────────────────────────────────────────────
+    # ── Step 4: Shear pin clearance holes through fore outer wall ─────────────────
+    R_outer = OD_MM / 2   # = 27mm
+    for deg in SHEAR_PIN_ANGLES_DEG:
+        rad   = math.radians(deg)
+        cos_a = math.cos(rad)
+        sin_a = math.sin(rad)
+        plane = Plane(
+            origin=(cos_a * R_outer, sin_a * R_outer, SHEAR_PIN_Z_MM),
+            z_dir=(-cos_a, -sin_a, 0),
+        )
+        with BuildSketch(plane):
+            Circle(CLEARANCE_D_MM / 2)
+        extrude(amount=CLEARANCE_DEPTH_MM, mode=Mode.SUBTRACT)
+
+# ── Step 5: Fin root fillets ───────────────────────────────────────────────────
 if FIN_FILLET_MM > 0:
     body_r = OD_MM / 2
     z_parallel_edges = airframe.edges().filter_by(Axis.Z)

@@ -39,7 +39,29 @@
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/flat_config.ini --center 150,150 --export-gcode --output C:/Users/rumiq/Desktop/rocket-build-rumi/prusaslicer/gcode/nose_cone.gcode C:/Users/rumiq/Desktop/rocket-build-rumi/gui/assets/stl/nose_cone.stl)",
       "Bash(python *)",
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode gui/assets/stl/fin_can.stl)",
-      "Bash(pip show *)"
+      "Bash(pip show *)",
+      "Bash(where python *)",
+      "Bash(uv *)",
+      "mcp__plugin_rocketsmith_rocketsmith__cadsmith_run_script",
+      "mcp__plugin_rocketsmith_rocketsmith__openrocket_component",
+      "mcp__plugin_rocketsmith_rocketsmith__openrocket_flight",
+      "mcp__plugin_rocketsmith_rocketsmith__openrocket_new",
+      "mcp__plugin_rocketsmith_rocketsmith__cadsmith_assembly",
+      "mcp__plugin_rocketsmith_rocketsmith__cadsmith_bd_warehouse_info",
+      "mcp__plugin_rocketsmith_rocketsmith__cadsmith_extract_part",
+      "mcp__plugin_rocketsmith_rocketsmith__cadsmith_generate_assets",
+      "mcp__plugin_rocketsmith_rocketsmith__gui_navigate",
+      "mcp__plugin_rocketsmith_rocketsmith__gui_server",
+      "mcp__plugin_rocketsmith_rocketsmith__manufacturing_annotate_tree",
+      "mcp__plugin_rocketsmith_rocketsmith__prusaslicer_config",
+      "mcp__plugin_rocketsmith_rocketsmith__prusaslicer_database",
+      "mcp__plugin_rocketsmith_rocketsmith__prusaslicer_slice",
+      "mcp__plugin_rocketsmith_rocketsmith__rag_reference",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('enabledPlugins',{}\\), indent=2\\)\\)\")",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/nose_cone.gcode cadsmith/step/nose_cone.step)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/recovery_bay.gcode cadsmith/step/recovery_bay.step)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step)",
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step grep \"; filament used \\\\[g\\\\]\" prusaslicer/gcode/fin_can.gcode)"
     ]
   }
 }
