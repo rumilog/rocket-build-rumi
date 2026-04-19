@@ -61,7 +61,10 @@
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/nose_cone.gcode cadsmith/step/nose_cone.step)",
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/recovery_bay.gcode cadsmith/step/recovery_bay.step)",
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step)",
-      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step grep \"; filament used \\\\[g\\\\]\" prusaslicer/gcode/fin_can.gcode)"
+      "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step grep \"; filament used \\\\[g\\\\]\" prusaslicer/gcode/fin_can.gcode)",
+      "Bash(tasklist /FI \"PID eq 33836\")",
+      "Bash(PYTHONPATH=/c/Users/rumiq/.claude/plugins/cache/rocketsmith/rocketsmith/0.0.18/src python -c \"from rocketsmith.gui.server import start_server; print\\('ok'\\)\")",
+      "Bash(echo \"Server started in background, PID=$!\")"
     ]
   }
 }

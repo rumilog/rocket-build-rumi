@@ -6,15 +6,15 @@
   "brep_path": null,
   "bounding_box": {
     "x": [
-      54.0,
+      101.6,
       "millimeter"
     ],
     "y": [
-      54.0,
+      101.6,
       "millimeter"
     ],
     "z": [
-      250.0,
+      270.0,
       "millimeter"
     ]
   },
@@ -23,16 +23,16 @@
   "description": null,
   "id": null,
   "volume": [
-    328707.26,
+    1267413.81,
     "millimeter ** 3"
   ],
   "surface_area": [
-    32104.14,
+    71049.27,
     "millimeter ** 2"
   ],
   "center_of_mass": {
     "x": [
-      -0.0,
+      0.0,
       "millimeter"
     ],
     "y": [
@@ -40,7 +40,7 @@
       "millimeter"
     ],
     "z": [
-      83.921,
+      97.014,
       "millimeter"
     ]
   },

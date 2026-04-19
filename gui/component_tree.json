@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_ork": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi\\openrocket\\H219T_sport.ork",
   "project_root": "C:\\Users\\rumiq\\Desktop\\rocket-build-rumi",
-  "generated_at": "2026-04-16T19:33:03.556559+00:00",
+  "generated_at": "2026-04-17T00:48:00.000000+00:00",
   "rocket_name": "H219T Sport",
   "stages": [
     {
@@ -20,37 +20,37 @@
               "millimeter"
             ],
             "base_od": [
-              54.0,
+              101.6,
               "millimeter"
             ],
             "wall": [
-              2.0,
+              6.35,
               "millimeter"
             ]
           },
           "mass": [
-            0.03225,
+            0.33095,
             "kilogram"
           ],
           "override_mass": [
-            0.03225,
+            0.33095,
             "kilogram"
           ],
-          "override_mass_enabled": false,
+          "override_mass_enabled": true,
           "material": "Cardboard",
           "material_density": [
             680.0,
             "kilogram / meter ** 3"
           ],
-          "human_notes": null,
+          "human_notes": "4\" ogive, solid shoulder, FDM printed at 15% gyroid infill",
           "agent": {
             "fate": "print",
             "fused_into": null,
             "reason": "Nose cone is always a standalone printed part for AM",
             "updated_by": "manufacturing",
-            "updated_at": "2026-04-16T19:33:03.559558+00:00",
-            "dfam_shoulder_length_mm": 30.0,
-            "dfam_shoulder_od_mm": 50.0,
+            "updated_at": "2026-04-17T00:48:00.000000+00:00",
+            "dfam_shoulder_length_mm": 50.0,
+            "dfam_shoulder_od_mm": 87.9,
             "dfam_hollow": false,
             "dfam_wall_mm": null
           },
@@ -69,36 +69,36 @@
               "millimeter"
             ],
             "od": [
-              54.0,
+              101.6,
               "millimeter"
             ],
             "id": [
-              50.0,
+              88.9,
               "millimeter"
             ],
             "motor_mount": false
           },
           "mass": [
-            0.066652,
+            0.41289,
             "kilogram"
           ],
           "override_mass": [
-            0.066652,
+            0.41289,
             "kilogram"
           ],
-          "override_mass_enabled": false,
+          "override_mass_enabled": true,
           "material": "Cardboard",
           "material_density": [
             680.0,
             "kilogram / meter ** 3"
           ],
-          "human_notes": null,
+          "human_notes": "4\" body tube with integrated aft coupler (50mm shoulder), FDM printed",
           "agent": {
             "fate": "print",
             "fused_into": null,
             "reason": "Body tube is always a standalone printed part for AM",
             "updated_by": "manufacturing",
-            "updated_at": "2026-04-16T19:33:03.560559+00:00"
+            "updated_at": "2026-04-17T00:48:00.000000+00:00"
           },
           "cost": null,
           "step_path": "cadsmith/step/recovery_bay.step",
@@ -137,7 +137,7 @@
                 "fused_into": null,
                 "reason": "Parachute \u2014 purchased/non-structural item",
                 "updated_by": "manufacturing",
-                "updated_at": "2026-04-16T19:33:03.560559+00:00"
+                "updated_at": "2026-04-17T00:48:00.000000+00:00"
               },
               "cost": null,
               "step_path": null,
@@ -150,25 +150,25 @@
               "dimensions": {
                 "kind": "tube",
                 "length": [
-                  30.0,
-                  "millimeter"
-                ],
-                "od": [
                   50.0,
                   "millimeter"
                 ],
+                "od": [
+                  87.9,
+                  "millimeter"
+                ],
                 "id": [
-                  46.0,
+                  83.9,
                   "millimeter"
                 ],
                 "motor_mount": false
               },
               "mass": [
-                0.006152,
+                0.018351,
                 "kilogram"
               ],
               "override_mass": [
-                0.006152,
+                0.018351,
                 "kilogram"
               ],
               "override_mass_enabled": false,
@@ -183,9 +183,9 @@
                 "fused_into": "recovery_bay",
                 "reason": "Coupler fused as integral aft shoulder (default AM policy)",
                 "updated_by": "manufacturing",
-                "updated_at": "2026-04-16T19:33:03.560559+00:00",
-                "dfam_shoulder_od_mm": 50.0,
-                "dfam_shoulder_length_mm": 30.0
+                "updated_at": "2026-04-17T00:48:00.000000+00:00",
+                "dfam_shoulder_od_mm": 87.9,
+                "dfam_shoulder_length_mm": 50.0
               },
               "cost": null,
               "step_path": null,
@@ -204,36 +204,36 @@
               "millimeter"
             ],
             "od": [
-              54.0,
+              101.6,
               "millimeter"
             ],
             "id": [
-              50.0,
+              88.9,
               "millimeter"
             ],
             "motor_mount": false
           },
           "mass": [
-            0.088869,
+            0.95601,
             "kilogram"
           ],
           "override_mass": [
-            0.088869,
+            0.95601,
             "kilogram"
           ],
-          "override_mass_enabled": false,
+          "override_mass_enabled": true,
           "material": "Cardboard",
           "material_density": [
             680.0,
             "kilogram / meter ** 3"
           ],
-          "human_notes": null,
+          "human_notes": "4\" fin can with integrated fins (130mm span), motor bore, and ejection baffle. Mass override covers all subcomponents.",
           "agent": {
             "fate": "print",
             "fused_into": null,
             "reason": "Body tube is always a standalone printed part for AM",
             "updated_by": "manufacturing",
-            "updated_at": "2026-04-16T19:33:03.560559+00:00"
+            "updated_at": "2026-04-17T00:48:00.000000+00:00"
           },
           "cost": null,
           "step_path": "cadsmith/step/fin_can.step",
@@ -249,21 +249,21 @@
                   "millimeter"
                 ],
                 "od": [
-                  38.0,
+                  41.7,
                   "millimeter"
                 ],
                 "id": [
-                  36.0,
+                  38.0,
                   "millimeter"
                 ],
                 "motor_mount": true
               },
               "mass": [
-                0.013042,
+                0.025986,
                 "kilogram"
               ],
               "override_mass": [
-                0.013042,
+                0.025986,
                 "kilogram"
               ],
               "override_mass_enabled": false,
@@ -278,10 +278,10 @@
                 "fused_into": "fin_can",
                 "reason": "Motor mount fused as local wall thickening (default AM policy)",
                 "updated_by": "manufacturing",
-                "updated_at": "2026-04-16T19:33:03.560559+00:00",
-                "dfam_bore_mm": 36.0,
-                "dfam_region_start_mm": 0.0,
-                "dfam_region_end_mm": 0.0
+                "updated_at": "2026-04-17T00:48:00.000000+00:00",
+                "dfam_bore_mm": 41.7,
+                "dfam_region_start_mm": 120.6,
+                "dfam_region_end_mm": 400.0
               },
               "cost": null,
               "step_path": null,
@@ -296,32 +296,32 @@
                 "fin_type": "trapezoid",
                 "count": 3,
                 "root_chord": [
-                  120.0,
+                  200.0,
                   "millimeter"
                 ],
                 "tip_chord": [
-                  50.0,
+                  80.0,
                   "millimeter"
                 ],
                 "span": [
-                  41.9,
+                  130.0,
                   "millimeter"
                 ],
                 "sweep": [
-                  40.0,
+                  60.0,
                   "millimeter"
                 ],
                 "thickness": [
-                  4.0,
+                  12.7,
                   "millimeter"
                 ]
               },
               "mass": [
-                0.029062,
+                0.471526,
                 "kilogram"
               ],
               "override_mass": [
-                0.029062,
+                0.471526,
                 "kilogram"
               ],
               "override_mass_enabled": false,
@@ -330,13 +330,13 @@
                 680.0,
                 "kilogram / meter ** 3"
               ],
-              "human_notes": null,
+              "human_notes": "DFAM thickness 12.7mm (was 4mm OR default). Covered by Fin Can mass override.",
               "agent": {
                 "fate": "fuse",
                 "fused_into": "fin_can",
                 "reason": "Fins always integrated into parent body tube for AM",
                 "updated_by": "manufacturing",
-                "updated_at": "2026-04-16T19:33:03.560559+00:00",
+                "updated_at": "2026-04-17T00:48:00.000000+00:00",
                 "dfam_thickness_mm": 12.7,
                 "dfam_or_thickness_mm": 4.0,
                 "dfam_fillet_mm": 3.0
@@ -349,16 +349,18 @@
         }
       ],
       "cg": [
-        541.5,
+        539.2,
         "millimeter"
       ],
       "cp": [
-        621.9,
+        675.9,
         "millimeter"
       ],
-      "stability_cal": 1.49,
+      "stability_cal": 1.346,
+      "stability_cal_min": 1.165,
+      "max_altitude_m": 92.8,
       "max_diameter": [
-        54.0,
+        101.6,
         "millimeter"
       ]
     }
