@@ -1,0 +1,10 @@
+# Generated gcode — too large for GitHub
+prusaslicer/gcode/*.gcode
+
+# Generated offline data bundle — rebuilt from project files
+gui/data.js
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
