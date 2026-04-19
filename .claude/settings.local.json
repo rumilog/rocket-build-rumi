@@ -64,7 +64,16 @@
       "Bash('C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe' --load prusaslicer/flat_config.ini --center 150,150 --export-gcode --output prusaslicer/gcode/fin_can.gcode cadsmith/step/fin_can.step grep \"; filament used \\\\[g\\\\]\" prusaslicer/gcode/fin_can.gcode)",
       "Bash(tasklist /FI \"PID eq 33836\")",
       "Bash(PYTHONPATH=/c/Users/rumiq/.claude/plugins/cache/rocketsmith/rocketsmith/0.0.18/src python -c \"from rocketsmith.gui.server import start_server; print\\('ok'\\)\")",
-      "Bash(echo \"Server started in background, PID=$!\")"
+      "Bash(echo \"Server started in background, PID=$!\")",
+      "Bash(netstat -ano)",
+      "Bash(grep -o \"window\\\\.location[^;\\\\\"']\\\\{0,80\\\\}\" /c/Users/rumiq/Desktop/rocket-build-rumi/gui/main.js)",
+      "Bash(taskkill /PID 25948 /F)",
+      "Bash(kill 25948)",
+      "Bash(cmd *)",
+      "Bash(grep -o \"function lE[^}]\\\\{0,200\\\\}\\\\|lE=function[^}]\\\\{0,200\\\\}\\\\|lE=[^,;]\\\\{0,100\\\\}\" /c/Users/rumiq/Desktop/rocket-build-rumi/gui/main.js)",
+      "Bash(grep -o \"function EL[^}]\\\\{0,200\\\\}\\\\|EL=function[^}]\\\\{0,200\\\\}\" /c/Users/rumiq/Desktop/rocket-build-rumi/gui/main.js)",
+      "Bash(grep -o \"function VD[^}]\\\\{0,300\\\\}\\\\|VD=function[^}]\\\\{0,300\\\\}\" /c/Users/rumiq/Desktop/rocket-build-rumi/gui/main.js)",
+      "Bash(grep -o \"invert_z\\\\|invertZ\\\\|joint_offset\\\\|jointOffset\\\\|position.*z\\\\|assembly[^;]\\\\{0,200\\\\}\" /c/Users/rumiq/Desktop/rocket-build-rumi/gui/main.js)"
     ]
   }
 }

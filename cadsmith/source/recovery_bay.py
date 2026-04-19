@@ -24,7 +24,7 @@ SHEAR_PIN_ANGLES_DEG = [0, 90, 180, 270]
 # Joint 1 — fore end (outer part): clearance holes for pin shaft to pass through.
 # Nose cone shoulder (inner) sits inside this bore. Holes at Z=15 align with
 # the heat inserts in the nose cone shoulder at its own Z=15.
-FORE_SHEAR_Z_MM      = 15.0   # from fore face (Z=0)
+FORE_SHEAR_Z_MM      = 35.0   # from fore face (Z=0); shoulder is 50mm deep, inserts at Z=15 from bottom → 50-15=35mm
 CLEARANCE_D_MM       = 2.6    # clearance diameter for 2-56 pin (major OD = 2.18mm)
 CLEARANCE_DEPTH_MM   = 8.0    # through 6.35mm wall + margin
 
