@@ -43,9 +43,9 @@ SHEAR_PIN_Z_MM       = 15.0   # from fore face
 CLEARANCE_D_MM       = 2.6    # clearance for 2-56 pin shaft
 CLEARANCE_DEPTH_MM   = 8.0    # through 6.35mm wall + margin
 
-# Ejection gas baffle — sits immediately above motor bore start (11" from aft)
-BAFFLE_Z_START      = 90.0   # baffle fore face (from fin can fore end)
-BAFFLE_THICK        = 30.0   # baffle thickness in Z (ends at 120mm, motor bore at 120.6mm)
+# Ejection gas baffle — aft face flush with motor bore start
+BAFFLE_THICK        = 30.0   # baffle thickness in Z (unchanged)
+BAFFLE_Z_START      = MOTOR_START_MM - BAFFLE_THICK  # fore face = 90.6mm, aft face = 120.6mm
 BAFFLE_BOSS_R       = 22.0   # central boss radius (scaled for 4" bore)
 BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 44.45mm
 BAFFLE_LEG_W        = 14.0   # leg width (tangential direction)
