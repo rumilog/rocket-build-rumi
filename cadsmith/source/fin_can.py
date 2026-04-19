@@ -20,7 +20,7 @@ ID_MM            = 88.9    # inner diameter (3.5")
 WALL_MM          = 6.35    # wall thickness (0.25")
 
 # Motor mount region: 11" bore from aft
-MOTOR_BORE_MM    = 41.7    # motor bore: 1.642" per spec
+MOTOR_BORE_MM    = 42.0    # motor bore diameter
 MOTOR_START_MM   = 120.6   # motor bore starts 120.6mm from fore (= 400 - 279.4mm)
 MOTOR_END_MM     = 400.0   # motor bore ends at aft face
 
@@ -46,7 +46,7 @@ CLEARANCE_DEPTH_MM   = 8.0    # through 6.35mm wall + margin
 # Ejection gas baffle — aft face flush with motor bore start
 BAFFLE_THICK        = 30.0   # baffle thickness in Z (unchanged)
 BAFFLE_Z_START      = MOTOR_START_MM - BAFFLE_THICK  # fore face = 90.6mm, aft face = 120.6mm
-BAFFLE_BOSS_R       = 22.0   # central boss radius (scaled for 4" bore)
+BAFFLE_BOSS_R       = 12.0   # boss radius — smaller than motor bore radius (21mm) so gas flows freely around it
 BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 44.45mm
 BAFFLE_LEG_W        = 14.0   # leg width (tangential direction)
 BAFFLE_LEG_INNER_R  = BAFFLE_BOSS_R - 2.0  # legs overlap 2mm into boss for clean fusion
