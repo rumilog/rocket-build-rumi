@@ -44,7 +44,7 @@ CLEARANCE_D_MM       = 2.6    # clearance for 2-56 pin shaft
 CLEARANCE_DEPTH_MM   = 8.0    # through 6.35mm wall + margin
 
 # Ejection gas baffle — aft face flush with motor bore start
-BAFFLE_THICK        = 30.0   # baffle thickness in Z (unchanged)
+BAFFLE_THICK        = 60.0   # baffle thickness in Z
 BAFFLE_Z_START      = MOTOR_START_MM - BAFFLE_THICK  # fore face = 90.6mm, aft face = 120.6mm
 BAFFLE_BOSS_R       = 12.0   # boss radius — smaller than motor bore radius (21mm) so gas flows freely around it
 BAFFLE_INNER_R      = ID_MM / 2  # leg outer radius = bore inner radius = 44.45mm
